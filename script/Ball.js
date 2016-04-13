@@ -25,8 +25,11 @@ Ball.prototype.move = function() {
 
 Ball.prototype._checkXWallCollision = function() {
 	if (this.x > CANVAS_WIDTH - this.radius || this.x < this.radius) {
-		WALL_SOUND.currentTime = 0;
-		WALL_SOUND.play();
+		
+		if(WALL_SOUND){
+			WALL_SOUND.currentTime = 0;
+			WALL_SOUND.play();
+		}
 		return true;
 	}
 	return false;
@@ -35,8 +38,12 @@ Ball.prototype._checkXWallCollision = function() {
 
 Ball.prototype._checkYWallCollision = function() {
 	if (this.y > CANVAS_HEIGHT - this.radius || this.y < this.radius) {
-		WALL_SOUND.currentTime = 0;
-		WALL_SOUND.play();
+		
+		if(WALL_SOUND){
+			WALL_SOUND.currentTime = 0;
+			WALL_SOUND.play();
+		}
+		
 		return true;
 	}
 	return false;

@@ -14,6 +14,16 @@ var gameOver = false;
 var SCORE_FONT = "50px Arial";
 var CANVAS_COLOR = "#000000";
 
+//Set requestAnimationFrame to whatever the current browser can uses
+var requestAnimationFrame = window.requestAnimationFrame
+		|| window.webkitRequestAnimationFrame
+		|| window.mozRequestAnimationFrame 
+		|| window.oRequestAnimationFrame
+		|| window.msRequestAnimationFrame 
+		|| function(callback) {
+			window.setTimeout(callback, 1000 / 60);
+		};
+
 var isCanvasSupported = !!window.HTMLCanvasElement;
 
 if (typeof window.Audio != 'undefined') {
@@ -31,7 +41,8 @@ var playerList = [];
 var keys = [];
 
 var canvas = document.createElement("canvas");
-var canvasUnsupportedTxtNode = document.createTextNode(CANVAS_UNSUPPORTED_MESSAGE);
+var canvasUnsupportedTxtNode = document
+		.createTextNode(CANVAS_UNSUPPORTED_MESSAGE);
 canvas.height = CANVAS_HEIGHT;
 canvas.width = CANVAS_WIDTH;
 canvas.style.background = CANVAS_COLOR;

@@ -17,9 +17,9 @@ var CANVAS_COLOR = "#000000";
 var isCanvasSupported = !!window.HTMLCanvasElement;
 
 if (typeof window.Audio != 'undefined') {
-	var WALL_SOUND = new Audio("sound/ping_pong_8bit_plop.ogg");
-	var PADDLE_SOUND = new Audio("sound/ping_pong_8bit_plop.ogg");
-	var SCORE_SOUND = new Audio("sound/ping_pong_8bit_peeeeeep.ogg");
+	var WALL_SOUND = new Audio("sound/ping_pong_8bit_plop.mp3");
+	var PADDLE_SOUND = new Audio("sound/ping_pong_8bit_plop.mp3");
+	var SCORE_SOUND = new Audio("sound/ping_pong_8bit_peeeeeep.mp3");
 }
 
 var CANVAS_UNSUPPORTED_MESSAGE = "Unfortunately you're using a browser which does not support canvas. Consider downloading a modern browser."
